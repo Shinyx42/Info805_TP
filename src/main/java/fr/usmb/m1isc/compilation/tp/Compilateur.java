@@ -162,12 +162,12 @@ public class Compilateur {
 			res+="\n\tpop eax";
 			res+="\n\tpop ebx";
 			res+="\n\tsub eax, ebx";
-			res+="\n\tjle faux_gt_"+id;
+			res+="\n\tjl faux_gte_"+id;
 			res+="\n\tmov eax,1";
-			res+="\n\tjmp sortie_gt_"+id;
-			res+="\nfaux_gt_"+id+":";
+			res+="\n\tjmp sortie_gte_"+id;
+			res+="\nfaux_gte_"+id+":";
 			res+="\n\tmov eax,0";
-			res+="\nsortie_gt_"+id+":";
+			res+="\nsortie_gte_"+id+":";
 			res+="\n\tpush eax";
 			break;
 		case IF:
